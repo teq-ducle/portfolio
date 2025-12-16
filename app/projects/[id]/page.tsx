@@ -1,4 +1,4 @@
-import { getAllDataContentMD } from "@/app/utils";
+import { getDataContentMD } from "@/app/utils";
 import ReactMarkdown from "react-markdown";
 import "./projects.css";
 
@@ -12,7 +12,7 @@ export default async function Page({
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
-  const dataContent = await getAllDataContentMD(id);
+  const dataContent = await getDataContentMD(id);
   console.log("dataContent ", dataContent);
   if (!dataContent) return <div>nodata</div>;
   return (

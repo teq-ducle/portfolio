@@ -3,18 +3,14 @@ import fs from "fs";
 import matter from "gray-matter";
 import path from "path";
 
-const NUMBER_SLICE = 4;
-
-export const getAllDataContentMD = async (
-  id: string,
-  isSlice: boolean = false
-) => {
+export const getDataContentMD = async (id: string) => {
   const projectsDir = await path.join(
     process.cwd(),
     "app",
     "contents",
     "projects"
   );
+
   const fileNames = await fs.readdirSync(projectsDir);
 
   let data: any[] | any[] = [];
@@ -40,5 +36,5 @@ export const getAllDataContentMD = async (
     };
   });
 
-  return data.find((i) => i.id === id) || null
+  return data.find((i) => i.id === id) || null;
 };
