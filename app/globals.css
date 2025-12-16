@@ -61,11 +61,8 @@ a {
   gap: 10px;
 }
 
-.title:hover{
-  color: #27ab83;
-  text-decoration: underline;
-}
 
 .title>span:hover{
   color: #27ab83;
+  text-decoration: underline;
 }
