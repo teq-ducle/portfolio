@@ -14,10 +14,14 @@ function SubProject(props: SubProjectProps) {
 
   return (
     <Link href={url} className="card-sub-project">
-      <Image src={image} alt="logo" width={42} height={42}/>
+      <Image src={image} alt="logo" width={42} height={42} />
       <div className="content">
-        <div>{title}</div>
-        <div>{description}</div>
+        <div>
+          <span className="title">{title}</span>
+        </div>
+        <div>
+          <span className="description">{description}</span>
+        </div>
       </div>
     </Link>
   );

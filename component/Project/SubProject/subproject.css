@@ -1,13 +1,23 @@
 .card-sub-project {
-  background-color: white;
   width: 100%;
   padding: 12px;
-  border: 1px solid blue;
-  border-radius: 4px;
+  background-color: rgba(0,0,0,0);
+  border-radius: 8px;
   display: flex;
   justify-content: space-between;
+  gap: 12px;
+  cursor: pointer;
+  transition: all 0.3 ease;
+}
+
+.card-sub-project:hover {
+  background-color: #f4f4f5;
 }
 
 .content{
   flex: 1 1;
+}
+
+.title{
+  font-weight: bold;
 }

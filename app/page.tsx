@@ -1,4 +1,5 @@
 import SubProject from "@/component/Project/SubProject";
+import Experience from "@/component/Experience";
 import Button from "@/component/Button";
 import { dataHome, dataExperience } from "./constants";
 
@@ -15,22 +16,27 @@ export default function Home() {
         essentially unchanged. It was popularised in the 1960s with the release
         of Letraset sheets containing Lorem Ipsum passages, and more recently
         with desktop publishing software like Aldus PageMaker including versions
-        of Lorem Ipsum.
+        of <span className="">VN</span> Ipsum.
       </p>
+
       <div className="content-parent">
         <div className="content-col-1">
           <div className="box">
             <div className="title">
-              <h3>Experience</h3>
+              <span>
+                Experience
+              </span>
             </div>
             <div className="sub-items">
               {dataExperience.map((item) => (
-                <SubProject
+                <Experience
                   key={item.id}
                   image={item.image}
-                  title={item.title}
+                  position={item.position}
+                  company={item.company}
+                  duration={item.duration}
+                  place={item.place}
                   description={item.description}
-                  url={item.url}
                 />
               ))}
             </div>
@@ -39,7 +45,9 @@ export default function Home() {
         <div className="content-col-2">
           <div className="box">
             <div className="title">
-              <h3>Projects</h3>
+              <span>
+                Projects
+              </span>
             </div>
             <div className="sub-items">
               <div className="sub-project-container">

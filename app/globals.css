@@ -21,7 +21,8 @@ a {
 *::before,
 *::after {
   box-sizing: border-box;
-  font-family: "Times New Roman", monospace !important;
+  font-family: "Noto Sans", monospace !important;
+  color: #000000E6;
 }
 
 .wrap {
@@ -39,6 +40,7 @@ a {
   justify-content: space-between;
   align-items: flex-start;
   gap: 10px;
+  margin-top: 24px;
 }
 
 .content-col-1{
@@ -53,8 +55,17 @@ a {
 .box{
   display: flex;
   flex-direction: column;
-  border: 1px solid red;
+  border: 0.5px solid #fdc9c9;
   border-radius: 8px;
   padding: 24px;
-  gap: 20px;
+  gap: 10px;
+}
+
+.title:hover{
+  color: #27ab83;
+  text-decoration: underline;
+}
+
+.title>span:hover{
+  color: #27ab83;
 }

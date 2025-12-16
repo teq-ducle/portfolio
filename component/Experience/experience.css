@@ -1,0 +1,59 @@
+.card-experience {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 8px;
+  width: 100%;
+  padding: 12px;
+  background-color: rgba(0,0,0,0);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  gap: 12px;
+}
+
+.card-experience:hover {
+  background-color: #f4f4f5;
+}
+
+.description {
+  width: calc(100% - 80px);
+  margin-top: 12px;
+}
+
+.description-line {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Number of lines to show */
+  -webkit-box-orient: vertical;
+  /* Standard property for future compatibility */
+  line-clamp: 2;
+}
+
+.detail{
+  position: relative;
+}
+
+.detail>span{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.inline-see-more-button{
+  border: 0;
+  color: rgb(0 0 0/.6);
+  background-color: rgba(0,0,0,0);
+  cursor: pointer;
+}
+
+.inline-see-more-button:hover{
+  color: #27ab83;
+}
+
+.position {
+  font-weight: bold;
+}
+
+.ligth-color {
+  color: #00000099;
+}
