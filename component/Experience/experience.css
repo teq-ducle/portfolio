@@ -4,14 +4,14 @@
   border-radius: 8px;
   width: 100%;
   padding: 12px;
-  background-color: rgba(0,0,0,0);
+  background-color: var(--bg-color);
   cursor: pointer;
   transition: all 0.3s ease;
   gap: 12px;
 }
 
 .card-experience:hover {
-  background-color: #f4f4f5;
+  background-color: var(--bg-hover);
 }
 
 .description {

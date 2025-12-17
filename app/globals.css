@@ -32,12 +32,11 @@ body {
   margin: 0;
   font-size: 14px;
   color: var(--text-2);
-  background-color: #fafafa;
+  background-color: var(--bg-color);
 }
-p {
-  margin: 0;
-}
+
 ul,
+p,
 li {
   padding: 0;
   margin: 0;
@@ -52,11 +51,10 @@ a {
 *::after {
   box-sizing: border-box;
   font-family: "Noto Sans", monospace !important;
-  color: #000000e6;
 }
 
 .wrap {
-  background-color: #fff;
+  /* background-color: var(--bg-color); */
   width: 100vw;
   max-width: 1024px;
   margin: 0 auto;

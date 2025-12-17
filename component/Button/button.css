@@ -4,17 +4,18 @@
   display: flex;
   justify-content: center;
   border: 1 solid transparent;
-  background-color: #f4f4f5;
+  background-color: var(--border-color);
   align-items: center;
   border-radius: 8px;
   cursor: pointer;
   font-weight: 600;
   margin: 0 auto;
   transition: all ease 0.3s;
+  color: var(--text-2);
 }
 
 .readmore:hover {
-  color: #27ab83;
-  border-color: #27ab83;
-  background-color: #fff;
+  color: var(--main);
+  border-color: var(--main);
+  background-color: rgba(0,0,0,0);
 }

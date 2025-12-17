@@ -4,6 +4,25 @@ import Link from "next/link";
 import "@/app/styles/header.css";
 import Image from "next/image";
 import { usePathname } from "next/navigation"; // 1. Import usePathname
+import ThemeSwitcher from "../ThemeSwitcher";
+
+const dataMenu = [
+  {
+    id: "now",
+    name: "Now",
+    path: "/now",
+  },
+  {
+    id: "projects",
+    name: "Projects",
+    path: "/projects",
+  },
+  {
+    id: "about",
+    name: "About",
+    path: "/about",
+  },
+];
 
 const Header: React.FC = () => {
   const pathname = usePathname(); // 2. Get current path
@@ -37,27 +56,41 @@ const Header: React.FC = () => {
           : "translateY(-140%) translateX(-50%)",
       }}
     >
-      <Link href={"/"} className="logo-ctn">
-        <Image
-          src={"/personal.png"}
-          className="logo"
-          alt="logo"
-          width={34}
-          height={34}
-        />
-      </Link>
+      <div className="styles_ctnLeftHeader">
+        <Link href={"/"} className="logo-ctn">
+          <Image
+            src={"/personal.png"}
+            className="logo"
+            alt="logo"
+            width={34}
+            height={34}
+          />
+        </Link>
+      </div>
 
-      <ul className="menu">
-        <li className="menu-child">
-          <Link href={"/now"}>Now</Link>
-        </li>
-        <li className="menu-child">
-          <Link href={"/projects"}>Project</Link>
-        </li>
-        <li className="menu-child">
-          <Link href={"/about"}>About</Link>
-        </li>
-      </ul>
+      <nav className="styles_nav">
+        <ul className="styles_menu">
+          {dataMenu.map((item) => (
+            <li
+              key={item.id}
+              className={`menu-child ${
+                pathname.includes(item.path) ? "menu-child-active" : ""
+              }`}
+            >
+              <Link href={item.path}>{item.name}</Link>
+              <span className={`${pathname.includes(item.path) ? "line-active" : ""}`}></span>
+            </li>
+          ))}
+        </ul>
+      </nav>
+      <div className="styles_ctnRightHeader">
+        <div className="styles_changeLanguage">
+          <span>EN</span>
+          <p>/</p>
+          <span>JP</span>
+        </div>
+        <ThemeSwitcher />
+      </div>
     </div>
   );
 };
