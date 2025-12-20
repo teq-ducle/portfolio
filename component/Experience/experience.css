@@ -56,3 +56,7 @@
 .ligth-color {
   color: #00000099;
 }
+
+.description-text{
+  white-space: pre-line;
+}

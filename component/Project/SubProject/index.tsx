@@ -16,12 +16,8 @@ function SubProject(props: SubProjectProps) {
     <Link href={url} className="card-sub-project">
       <Image src={image} alt="logo" width={42} height={42} />
       <div className="content">
-        <div>
-          <span className="title">{title}</span>
-        </div>
-        <div>
-          <span className="description">{description}</span>
-        </div>
+        <p className="title">{title}</p>
+        <p className="sub-project-description">{description}</p>
       </div>
     </Link>
   );
