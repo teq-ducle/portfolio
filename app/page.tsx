@@ -1,8 +1,9 @@
 import SubProject from "@/component/Project/SubProject";
 import Experience from "@/component/Experience";
 import Button from "@/component/Button";
-import { dataProjects, dataExperience } from "./constants";
+import { dataProjects, dataExperience, dataSkill } from "./constants";
 import { formatExperienceDuration } from "./utils";
+import Skill from "@/component/Skill";
 
 export default function Home() {
   const startYoe = new Date("2022-10-01");
@@ -29,6 +30,8 @@ export default function Home() {
   => monthDiff3 = 11 - 11 = 0 && dateToday = 1 > dateStart = 2 => chưa được 3 năm
   */
 
+
+
   return (
     <div>
       <h1>Xin chào, mình tên là Đức</h1>
@@ -48,9 +51,9 @@ export default function Home() {
         chung là làm thợ đụng(ngoài code 🥲)
         <span className="space-between-graph"></span>
         Mình <b>KHÔNG</b> phải xuất phát từ ngành CNTT, nhưng nhờ một vài sự
-        tình cờ, mình được tham gia vào một công ty IT outsourc cho thị trường Nhật khi mới
-        về Việt Nam, kể từ đó sự tò mò và hứng thú khi làm mảng Web Development
-        luôn được duy trì đến hiện tại 😁.
+        tình cờ, mình được tham gia vào một công ty IT outsourc cho thị trường
+        Nhật khi mới về Việt Nam, kể từ đó sự tò mò và hứng thú khi làm mảng Web
+        Development luôn được duy trì đến hiện tại 😁.
         <span className="space-between-graph"></span>
         Vì luôn tò mò về công nghệ(vì không biết gì cả 😩), nên mình làm ra
         trang này để PR bản thân 🫣 nhưng cũng là nơi để ghi lại chặng đường của
@@ -72,7 +75,10 @@ export default function Home() {
                   image={item.image}
                   position={item.position}
                   company={item.company}
-                  duration={formatExperienceDuration(item.startDate, item.endDate)}
+                  duration={formatExperienceDuration(
+                    item.startDate,
+                    item.endDate
+                  )}
                   place={item.place}
                   description={item.description}
                 />
@@ -104,6 +110,14 @@ export default function Home() {
                 type={"readmore"}
                 url={"/projects"}
               />
+            </div>
+          </div>
+          <div className="box">
+            <p className="title">Skills</p>
+            <div className="skill-items">
+              {dataSkill.map((item) => (
+                <Skill key={item.id} name={item.name} />
+              ))}
             </div>
           </div>
         </div>

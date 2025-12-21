@@ -13,8 +13,6 @@ const dataQuarter = {
 };
 
 const TimeLine: React.FC<TimeLineProps> = ({ title, quater }) => {
-  console.log(dataQuarter[quater]);
-
   return (
     <div className="timeLineFrame">
       <h3 className="timeLineTitle">{title}</h3>

@@ -4,7 +4,8 @@ const dataProjects = [
     id: 1,
     image: "/personal.png",
     title: "Bảo hiểm trường học",
-    description: "Dự án bảo hiểm dành cho học sinh, dùng để đăng ký và quản lý hợp đồng bảo hiểm và đối tượng của sản phẩm trải dài từ cấp từ mẫu giáo đến đại học.",
+    description:
+      "Dự án bảo hiểm dành cho học sinh, dùng để đăng ký và quản lý hợp đồng bảo hiểm và đối tượng của sản phẩm trải dài từ cấp từ mẫu giáo đến đại học.",
     // long-description:" Dự án được triển khai trước năm học chính thức bên Nhật, được dùng đăng ký và quản lý bảo hiểm tổng hợp dành cho học sinh và trẻ em của Mitsui Sumitomo Kaijo.\n Dự án này đã được phát triển ở 1 bên khác, sau đó được bên mình tiếp nhận và phát triển tiếp.\n Dự án đã sang phase 3 và sẽ được triển khai hằng năm",
     url: "/projects/1",
   },
@@ -12,7 +13,8 @@ const dataProjects = [
     id: 2,
     image: "/personal.png",
     title: "Bảo hiểm thiết bị",
-    description: "Dự án bảo hiểm dành cho thiết bị điện tử(điện thoại, tablet, camera,...), dùng để đăng ký và quản lý hợp đồng bảo hiểm và yêu cầu thanh toán bảo hiểm khi gặp sự cố",
+    description:
+      "Dự án bảo hiểm dành cho thiết bị điện tử(điện thoại, tablet, camera,...), dùng để đăng ký và quản lý hợp đồng bảo hiểm và yêu cầu thanh toán bảo hiểm khi gặp sự cố",
     // long-description: "",
     url: "/projects/2",
   },
@@ -95,25 +97,25 @@ const dataAbout = [
     title: "Sample1",
     description: "Sample1",
   },
-    {
+  {
     id: 2,
     date: "2023",
     title: "Sample2",
     description: "Sample2",
   },
-    {
+  {
     id: 3,
     date: "2024",
     title: "Sample3",
     description: "Sample1",
   },
-    {
+  {
     id: 4,
     date: "2025",
     title: "Sample4",
     description: "Sample4",
   },
-    {
+  {
     id: 5,
     date: "2026",
     title: "Sample5",
@@ -121,4 +123,16 @@ const dataAbout = [
   },
 ];
 
-export { dataProjects, dataExperience, dataMainProject, dataAbout };
+const dataSkill = [
+  { id: 1, name: "Miro" },
+  { id: 2, name: "Google Workspace" },
+  { id: 3, name: "Figma" },
+  { id: 4, name: "HTML" },
+  { id: 5, name: "CSS" },
+  { id: 6, name: "Postman" },
+  { id: 7, name: "Backlog" },
+  { id: 8, name: "Japanese" },
+  { id: 9, name: "English" },
+];
+
+export { dataProjects, dataExperience, dataMainProject, dataAbout, dataSkill };

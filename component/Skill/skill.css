@@ -1,0 +1,23 @@
+.skill {
+  /* Định dạng cơ bản cho nút */
+  padding: 8px;
+  display: inline-flex;
+  border-radius: 8px;
+  white-space: nowrap;
+  font-size: 12px;
+  cursor: pointer;
+  border: 1px solid var(--border-color);
+  background-color: transparent;
+  font-weight: bold;
+
+  /* Thiết lập nền cho hiệu ứng */
+  background-image: linear-gradient(to right, var(--main) 50%, transparent 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all 0.5s ease-out;
+}
+
+.skill:hover {
+  background-position: left bottom;
+  color: white;
+}
