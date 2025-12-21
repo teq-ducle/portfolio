@@ -1,49 +1,38 @@
 ---
 id: "1"
-titleVI: "Vuong Khang Home"
-descriptionVI: "Một trang landing giới thiệu các sản phẩm và dịch vụ của Vương Khang Home, được xây dựng với NuxtJS và SCSS để đảm bảo hiệu suất cao và trải nghiệm người dùng mượt mà."
-titleEN: "Vuong Khang Home"
-descriptionEN: "A landing page showcasing the products and services of Vuong Khang Home, built with NuxtJS and SCSS to ensure high performance and a seamless user experience."
-link: "https://vuongkhanghome.com/"
-tech: ["NuxtJS", "SCSS"]
-date: "2021-04-03"
+titleVI: "Bảo hiểm trường học"
+descriptionVI: "Dự án bảo hiểm dành cho học sinh, dùng để đăng ký và quản lý hợp đồng bảo hiểm và đối tượng của sản phẩm trải dài từ cấp từ mẫu giáo đến đại học."
+titleJP: "学校・こども総合保険・・・学校に通う子供を持つ保護者が加入する保険"
+descriptionJP: "学校・こども総合保険・・・学校に通う子供を持つ保護者が加入する保険"
+link: "example.comn"
+tech: ["VueJS"]
+date: "2025-07-01"
 slug: "vuong-khang-home-landing-page"
 image: "/projects/project1/vuongkhanghome.webp"
 ---
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## I.Giới thiệu
+Bảo hiểm trường học là tên chung của một dự án lớn, trong đó được chia thành nhiều phần nhỏ hơn tương ứng với mỗi ngôi trường để phù hợp cho nhu cầu của từng trường.
 
-## Getting Started
+Dự án được bắt đầu phát triển từ 10/2023, triển khai đầu tiên dành cho học sinh mầm non(園児). Sau đó, được mở rộng cho cấp 2 và cấp 3(中高連) các tháng tiếp theo. Dự án được release lần đầu tiên vào đầu năm 2024. Dự án thu hút được sự quan tâm và được triển khai đến cấp đại học(大学・大学院). 
 
-First, run the development server:
+Dự án được bên mình tiếp nhận vào giữa năm 2025 để đáp ứng được số lượng trường ngày càng mở rộng.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+**Các thành phần chính của dự án:**
+- Trang đăng ký hợp đồng: Học sinh vào trang web của từng trường để tham khảo các loại hợp đồng mà mỗi nơi triển khai, từ đó chọn ra sản phẩm phù hợp và thực hiện thủ tục đăng ký qua form có sẵn
+- Trang mypage: Học sinh hoặc phụ huynh sẽ quản lý số lượng, tình trạng hợp đồng đã đăng ký. 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## II. Đặc điểm của dự án
+### 1. Công nghệ
+### 2. Con người
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## III. Những điều đã đạt được
+### 1. Công nghệ
+### 2. Con người
+### 3. Dự án
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

@@ -15,7 +15,7 @@ const getDataContentMD = async (id: string) => {
 
   let data: any[] | any[] = [];
 
-  data = fileNames.map((fileName, index) => {
+  data = fileNames.map((fileName) => {
     const filePath = path.join(projectsDir, fileName);
     const fileContents = fs.readFileSync(filePath, "utf8");
     const { data, content } = matter(fileContents);
@@ -24,9 +24,9 @@ const getDataContentMD = async (id: string) => {
       id: data.id,
       slug: data.slug,
       titleVI: data.titleVI,
-      titleEN: data.titleEN,
+      titleJP: data.titleJP,
       descriptionVI: data.descriptionVI,
-      descriptionEN: data.descriptionEN,
+      descriptionJP: data.descriptionJP,
       tech: data.tech || [], // for project
       tag: data.tag || [], // for blog
       link: data.link || "", // for project
