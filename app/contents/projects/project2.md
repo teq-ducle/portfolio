@@ -10,7 +10,7 @@ date: "2021-04-03"
 slug: "vuong-khang-home-landing-page"
 image: "/projects/project1/vuongkhanghome.webp"
 ---
-
+<---vi--->
 ## Project Introduction:
 
 [Vuong Khang Home](https://vuongkhanghome.com/) is a website dedicated to showcasing **home design and construction services**, including building, interior renovation, and providing comprehensive solutions for modern living spaces.
@@ -45,3 +45,7 @@ This project was developed to help potential customers easily access information
 - Improved SEO rankings, increasing online visibility and attracting more potential clients.
 - A modern and professional website design that enhances brand credibility and user engagement.
 - Enhanced mobile compatibility, ensuring an excellent experience across all devices.
+
+
+<---ja--->
+### JA Text
