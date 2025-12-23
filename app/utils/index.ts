@@ -69,8 +69,21 @@ const getDataContentMD = async (id: string) => {
   const { data, content } = matter(file);
 
   const contentByLocale = splitByLocale(content);
+
+    const i18n = {
+    vi: data.i18n?.vi ?? {
+      title: data.titleVI ?? "",
+      description: data.descriptionVI ?? "",
+    },
+    ja: data.i18n?.ja ?? {
+      title: data.titleJP ?? "",
+      description: data.descriptionJP ?? "",
+    },
+  };
+
   return {
     ...data,
+    i18n,
     contentByLocale,
   };
 };
