@@ -1,5 +1,5 @@
 ---
-id: "1"
+id: "insurance-school1"
 titleVI: "Bảo hiểm trường học"
 descriptionVI: "Dự án bảo hiểm dành cho học sinh, dùng để đăng ký và quản lý hợp đồng bảo hiểm và đối tượng của sản phẩm trải dài từ cấp từ mẫu giáo đến đại học."
 titleJP: "学校・こども総合保険・・・学校に通う子供を持つ保護者が加入する保険"
@@ -7,8 +7,8 @@ descriptionJP: "学校・こども総合保険・・・学校に通う子供を�
 link: "example.comn"
 tech: ["VueJS"]
 date: "2025-07-01"
-slug: "vuong-khang-home-landing-page"
-image: "/projects/project1/vuongkhanghome.webp"
+slug: ""
+image: ""
 ---
 <---vi--->
 # I. Giới thiệu chung

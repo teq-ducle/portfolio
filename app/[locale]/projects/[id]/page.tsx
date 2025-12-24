@@ -3,7 +3,7 @@ import ReactMarkdown from "react-markdown";
 import "./projects.css";
 
 export async function generateStaticParams() {
-  return [{ id: "1" }, { id: "2" }, { id: "3" }];
+  return [{ id: "insurance-school1" }, { id: "insurance-school2" }, { id: "insurance-school3" }];
 }
 
 const Page = async ({

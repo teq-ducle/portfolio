@@ -1,15 +1,20 @@
-'use client';
+"use client";
 
-import SubProject from "@/component/Project/SubProject";
+// import SubProject from "@/component/Project/SubProject";
+import Project from "@/component/Project";
 import Experience from "@/component/Experience";
 import Button from "@/component/Button";
-import { dataProjects, dataExperience, dataSkill } from "../constants";
-import { formatExperienceDuration } from "../utils/formatExperienceDuration";
+import {
+  dataProjects,
+  dataExperience,
+  dataSkill,
+} from "@/app/constants";
+import { formatExperienceDuration } from "@/app/utils/formatExperienceDuration";
 import Skill from "@/component/Skill";
-import { useTranslations } from 'next-intl';
+import { useTranslations } from "next-intl";
 
 export default function Home() {
-  const t = useTranslations('HomePage');
+  const t = useTranslations("HomePage");
   const startYoe = new Date("2022-10-01");
   const today = new Date();
 
@@ -24,30 +29,29 @@ export default function Home() {
 
   return (
     <div>
-      <h1>{t('greeting')}</h1>
+      <h1>{t("greeting")}</h1>
       <div>
-        {t('intro')}{" "}
-        <span className="highlight">{t('position')}</span>. {t('experience', { yoe })}
+        {t("intro")} <span className="highlight">{t("position")}</span>.{" "}
+        {t("experience", { yoe })}
         <br />
         <span className="space-between-graph"></span>
-        {t('mainField')}{" "}
-        <span className="highlight">{t('webDevelopment')}</span> {t('businessDomain')}{" "}
-        <span className="highlight">{t('insurance')}</span>
-        <br /> 
-        {t('brseRole')}
+        {t("mainField")}{" "}
+        <span className="highlight">{t("webDevelopment")}</span>{" "}
+        {t("businessDomain")}{" "}
+        <span className="highlight">{t("insurance")}</span>
+        <br />
+        {t("brseRole")}
         <span className="space-between-graph"></span>
-        {t('background')}
+        {t("background")}
         <span className="space-between-graph"></span>
-        {t('purpose')}
-        <p className="note">
-          {t('note')}
-        </p>
+        {t("purpose")}
+        <p className="note">{t("note")}</p>
       </div>
       <div className="content-parent">
         <div className="content-col-1">
           <div className="box">
             <div className="title">
-              <span>{t('experienceTitle')}</span>
+              <span>{t("experienceTitle")}</span>
             </div>
             <div className="sub-items">
               {dataExperience.map((item) => (
@@ -70,12 +74,21 @@ export default function Home() {
         <div className="content-col-2">
           <div className="box">
             <div className="title">
-              <span>{t('projectsTitle')}</span>
+              <span>{t("projectsTitle")}</span>
             </div>
             <div className="sub-items">
               <div className="sub-project-container">
-                {dataProjects.map((item) => (
+                {/* {dataProjects.map((item) => (
                   <SubProject
+                    key={item.id}
+                    image={item.image}
+                    title={item.title}
+                    description={item.description}
+                    url={item.url}
+                  />
+                ))} */}
+                {dataProjects.map((item) => (
+                  <Project
                     key={item.id}
                     image={item.image}
                     title={item.title}
@@ -87,14 +100,14 @@ export default function Home() {
             </div>
             <div>
               <Button
-                text={t('seeAllProjects')}
+                text={t("seeAllProjects")}
                 type={"readmore"}
                 url={"/projects"}
               />
             </div>
           </div>
           <div className="box">
-            <p className="title">{t('skillsTitle')}</p>
+            <p className="title">{t("skillsTitle")}</p>
             <div className="skill-items">
               {dataSkill.map((item) => (
                 <Skill key={item.id} name={item.name} />
@@ -106,4 +119,3 @@ export default function Home() {
     </div>
   );
 }
-
