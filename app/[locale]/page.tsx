@@ -4,11 +4,7 @@
 import Project from "@/component/Project";
 import Experience from "@/component/Experience";
 import Button from "@/component/Button";
-import {
-  dataProjects,
-  dataExperience,
-  dataSkill,
-} from "@/app/constants";
+import { dataProjects, dataExperience, dataSkill } from "@/app/constants";
 import { formatExperienceDuration } from "@/app/utils/formatExperienceDuration";
 import Skill from "@/component/Skill";
 import { useTranslations } from "next-intl";
@@ -78,15 +74,6 @@ export default function Home() {
             </div>
             <div className="sub-items">
               <div className="sub-project-container">
-                {/* {dataProjects.map((item) => (
-                  <SubProject
-                    key={item.id}
-                    image={item.image}
-                    title={item.title}
-                    description={item.description}
-                    url={item.url}
-                  />
-                ))} */}
                 {dataProjects.map((item) => (
                   <Project
                     key={item.id}

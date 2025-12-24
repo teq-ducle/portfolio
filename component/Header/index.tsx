@@ -56,6 +56,7 @@ const Header: React.FC = () => {
             height={34}
           />
         </Link>
+        <span>LÊ TRUNG ĐỨC</span>
       </div>
 
       <nav className="styles_nav">
@@ -68,7 +69,11 @@ const Header: React.FC = () => {
               }`}
             >
               <Link href={item.path}>{item.name}</Link>
-              <span className={`${pathname.includes(item.path) ? "line-active" : ""}`}></span>
+              <span
+                className={`${
+                  pathname.includes(item.path) ? "line-active" : ""
+                }`}
+              ></span>
             </li>
           ))}
         </ul>
