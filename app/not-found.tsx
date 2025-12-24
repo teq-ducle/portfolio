@@ -1,12 +1,14 @@
 'use client';
 
-import { useEffect } from 'react';
+// import { useEffect } from "react";
 
 export default function NotFound() {
-  useEffect(() => {
-    window.location.href = '/vi';
-  }, []);
 
-  return null;
+
+  return (
+    <div className="notFound">
+      Page not found
+    </div>
+  )
 }
 

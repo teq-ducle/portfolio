@@ -4,11 +4,11 @@ import Header from "@/component/Header";
 import Footer from "@/component/Footer";
 import { ThemeProvider } from "next-themes";
 import { Noto_Sans } from "next/font/google";
-import { NextIntlClientProvider } from 'next-intl';
-import { routing } from '@/i18n/routing';
-import { notFound } from 'next/navigation';
-import viMessages from '@/messages/vi.json';
-import jaMessages from '@/messages/ja.json';
+import { NextIntlClientProvider } from "next-intl";
+import { routing } from "@/i18n/routing";
+import { notFound } from "next/navigation";
+import viMessages from "@/messages/vi.json";
+import jaMessages from "@/messages/ja.json";
 
 const notoSans = Noto_Sans({
   subsets: ["latin"],
@@ -17,8 +17,8 @@ const notoSans = Noto_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Duc App",
-  description: "Duc next app",
+  title: "Duc Le",
+  description: "Duc Le app",
 };
 
 export function generateStaticParams() {
@@ -40,16 +40,16 @@ export default async function LocaleLayout({
   }
 
   // Load messages directly for static export compatibility
-  const messages = locale === 'ja' ? jaMessages : viMessages;
-  
-  // Debug logging
-  console.log('🌍 Layout - Current locale:', locale);
-  console.log('📝 Layout - Messages greeting:', messages?.HomePage?.greeting);
+  const messages = locale === "ja" ? jaMessages : viMessages;
 
   return (
     <html lang={locale} suppressHydrationWarning>
       <body className={notoSans.className}>
-        <NextIntlClientProvider key={locale} locale={locale} messages={messages}>
+        <NextIntlClientProvider
+          key={locale}
+          locale={locale}
+          messages={messages}
+        >
           <ThemeProvider
             attribute="data-theme"
             defaultTheme="light"
@@ -66,4 +66,3 @@ export default async function LocaleLayout({
     </html>
   );
 }
-

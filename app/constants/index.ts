@@ -111,4 +111,6 @@ const dataSkill = [
   { id: 9, name: "English" },
 ];
 
+// const SUPPORTED_LOCALES = ['vi', 'ja'];
+
 export { dataProjects, dataExperience, dataAbout, dataSkill };

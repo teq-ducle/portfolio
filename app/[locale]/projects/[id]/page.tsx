@@ -1,9 +1,15 @@
 import { getDataContentMD } from "@/app/utils";
 import ReactMarkdown from "react-markdown";
 import "./projects.css";
+import {notFound} from 'next/navigation'
+import { routing } from "@/i18n/routing";
 
 export async function generateStaticParams() {
-  return [{ id: "insurance-school1" }, { id: "insurance-school2" }, { id: "insurance-school3" }];
+  const ids = ["insurance-school1", "insurance-school2", "insurance-school3"];
+
+  return routing.locales.flatMap((locale) =>
+    ids.map((id) => ({ locale, id }))
+  );
 }
 
 const Page = async ({
@@ -13,29 +19,30 @@ const Page = async ({
 }) => {
   const { id, locale } = await params;
   const dataContent = await getDataContentMD(id);
-  if (!dataContent) return <div>nodata</div>;
+  if (!dataContent) return notFound();
 
-//   const meta = dataContent.i18n?.[locale] ?? dataContent.i18n?.vi;
-//   console.log("meta ", meta);
+  //   const meta = dataContent.i18n?.[locale] ?? dataContent.i18n?.vi;
+  //   console.log("meta ", meta);
 
-//   const markdown =
-//     dataContent.contentByLocale?.[locale] ??
-//     dataContent.contentByLocale?.vi ??
-//     "Nội dung đang được cập nhật.";
+  //   const markdown =
+  //     dataContent.contentByLocale?.[locale] ??
+  //     dataContent.contentByLocale?.vi ??
+  //     "Nội dung đang được cập nhật.";
 
-//   return (
-//     <div className="content-ctn">
-//       <h1 className="title">{meta?.title}</h1>
-//       <p className="description">{meta?.description}</p>
-//       <div className="markdown-content">
-//         <ReactMarkdown>{markdown}</ReactMarkdown>
-//       </div>
-//     </div>
-//   );
-// };
-  const contentVi = dataContent.content.split("<---vi--->")[1].split("<---ja--->")[0];
+  //   return (
+  //     <div className="content-ctn">
+  //       <h1 className="title">{meta?.title}</h1>
+  //       <p className="description">{meta?.description}</p>
+  //       <div className="markdown-content">
+  //         <ReactMarkdown>{markdown}</ReactMarkdown>
+  //       </div>
+  //     </div>
+  //   );
+  // };
+  const contentVi = dataContent.content
+    .split("<---vi--->")[1]
+    .split("<---ja--->")[0];
   const contentJa = dataContent.content.split("<---ja--->")[1];
-  console.log("dataContent ", dataContent);
 
   return (
     <div className="content-ctn">

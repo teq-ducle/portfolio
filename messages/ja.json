@@ -25,5 +25,9 @@
   },
   "Footer": {
     "copyright": "© 2024 ドゥク. All rights reserved."
+  },
+  "NotFound": {
+    "title": "ページが見つかりません",
+    "description": "お探しのページは存在しません。"
   }
 }

@@ -127,3 +127,7 @@ a {
   line-clamp: 2;
   width: 100%;
 }
+
+.notFound{
+  background-color: red;
+}
