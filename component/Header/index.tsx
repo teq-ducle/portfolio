@@ -8,19 +8,9 @@ import LanguageSwitcher from "../LanguageSwitcher";
 
 const dataMenu = [
   {
-    id: "now",
-    name: "Now",
-    path: "/now",
-  },
-  {
     id: "projects",
     name: "Projects",
     path: "/projects",
-  },
-  {
-    id: "about",
-    name: "About",
-    path: "/about",
   },
 ];
 
