@@ -41,7 +41,6 @@ export default function Home() {
         {t("background")}
         <span className="space-between-graph"></span>
         {t("purpose")}
-        <p className="note">{t("note")}</p>
       </div>
       <div className="content-parent">
         <div className="content-col-1">
