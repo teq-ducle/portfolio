@@ -9,6 +9,7 @@ tech: ["VueJS"]
 date: "2025-07-01"
 slug: ""
 image: ""
+category: "Insurance Tech"
 ---
 <---vi--->
 # I. Giới thiệu chung

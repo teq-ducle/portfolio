@@ -1,15 +1,13 @@
 import { getDataContentMD } from "@/app/utils";
 import ReactMarkdown from "react-markdown";
 import "./projects.css";
-import {notFound} from 'next/navigation'
+import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 
 export async function generateStaticParams() {
   const ids = ["insurance-school1", "insurance-school2", "insurance-school3"];
 
-  return routing.locales.flatMap((locale) =>
-    ids.map((id) => ({ locale, id }))
-  );
+  return routing.locales.flatMap((locale) => ids.map((id) => ({ locale, id })));
 }
 
 const Page = async ({
