@@ -1,4 +1,4 @@
-:root {
+[data-theme="light"] {
   --viewbox: 1216px;
   --main: #ff5c39;
   --text-1: #71717a;
@@ -31,6 +31,16 @@
   --bg-hover: #3f4250;
   --bg-overlay: rgba(255, 92, 57, 0.1);
   --shadow: rgba(255, 92, 57, 0.08) 0px 3px 5px;
+}
+
+[data-theme="dark"] .highlight {
+  color: #ff8a6b;
+  box-shadow: rgba(255, 92, 57, 0.3) 0px -1.3rem inset;
+}
+
+[data-theme="light"] .highlight {
+  color: #ff4520;
+  box-shadow: rgba(255, 92, 57, 0.2) 0px -1.3rem inset;
 }
 
 body {
@@ -95,19 +105,18 @@ a {
   gap: 10px;
 }
 
-.title > span:hover {
-  color: #27ab83;
+.hp-title{
+  font-weight: bold;
+  color: var(--main);
+}
+
+.hp-title > span:hover {
   text-decoration: underline;
 }
 
 .space-between-graph {
   display: block;
   margin-top: 12px;
-}
-
-.highlight {
-  color: #27ab83;
-  box-shadow: rgba(39, 171, 131, 0.19) 0px -1.3rem inset;
 }
 
 .note {

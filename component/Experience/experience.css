@@ -14,11 +14,12 @@
 }
 
 .description {
-  width: calc(100% - 80px);
+  width: 100%;
   margin-top: 12px;
 }
 
 .description-line {
+  width: calc(100% - 80px);
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -28,25 +29,27 @@
   line-clamp: 2;
 }
 
-.detail{
+.detail {
   position: relative;
 }
 
-.detail>span{
+.detail > span {
   position: absolute;
   bottom: 0;
   right: 0;
 }
 
-.inline-see-more-button{
+.inline-see-more-button {
   border: 0;
-  color: rgb(0 0 0/.6);
-  background-color: rgba(0,0,0,0);
+  /* color: rgb(0 0 0/0.6); */
+  background-color: rgba(0, 0, 0, 0);
+  color: var(--text-2);
+
   cursor: pointer;
 }
 
-.inline-see-more-button:hover{
-  color: #27ab83;
+.inline-see-more-button:hover {
+  color: var(--main);
 }
 
 .position {
@@ -54,9 +57,9 @@
 }
 
 .ligth-color {
-  color: #00000099;
+  color: var(--text-1);
 }
 
-.description-text{
+.description-text {
   white-space: pre-line;
 }

@@ -20,8 +20,8 @@ Dự án được bắt đầu phát triển từ 10/2023, triển khai đầu t
 Dự án được bên mình tiếp nhận vào giữa năm 2025 để đáp ứng được số lượng trường ngày càng mở rộng.
 
 **Các thành phần chính của dự án:**
-- Trang đăng ký hợp đồng: Học sinh vào trang web của từng trường để tham khảo các loại hợp đồng mà mỗi nơi triển khai, từ đó chọn ra sản phẩm phù hợp và thực hiện thủ tục đăng ký qua form có sẵn
-- Trang mypage: Học sinh hoặc phụ huynh sẽ quản lý số lượng, tình trạng hợp đồng đã đăng ký. 
+- `Trang đăng ký hợp đồng`: Học sinh vào trang web của từng trường để tham khảo các loại hợp đồng mà mỗi nơi triển khai, từ đó chọn ra sản phẩm phù hợp và thực hiện thủ tục đăng ký qua form có sẵn
+- `Trang mypage`: Học sinh hoặc phụ huynh sẽ quản lý số lượng, tình trạng hợp đồng đã đăng ký. 
 
 # II. Đặc trưng của dự án
 ## Bối cảnh
@@ -66,24 +66,26 @@ Dự án được bên mình tiếp nhận vào giữa năm 2025 để đáp ứ
 # III. Những điều đã đạt được
 1.&nbsp; Sự tin tưởng của phía Nhật Bản
 - Trực tiếp đảm nhận set up sản phẩm
-- Đề xuất của team được xem xét 
+- Đề xuất tối ưu của team được xem xét và ứng dụng nhiều hơn
+- Sau khi tiếp nhận, team đã release thành công 3 đợt mà hầu như không có bug mà phía Nhật trả về(vì vấn đề đã giải quyết triệt để trong lúc phát triển) => team Nhật tiếp tục bàn giao cho team để phát triển cho những năm tiếp theo
 
 2.&nbsp; Tham gia nhiều hơn về mặt kỹ thuật: không phải trực tiếp viết code, nhưng tham gia nhiều hơn về quản lý tình hình thông qua Github và nhiều thứ khác
 - Trao đổi request, bug, etc trên `Discussions` của github
-- Set up sản phẩm bảo hiểm(`21/21` sản phẩm, trong đó có những sản phẩm có số lượng câu hỏi lên đến 50)
+- Set up sản phẩm bảo hiểm(`21/21 sản phẩm`, trong đó có những sản phẩm có số lượng câu hỏi lên đến 50)
 - Sử dụng `bot github-action` được tích hợp trong repo dự án để điều tra bug, tìm hiểu tài liệu dự án
 
-3.&nbsp; Cách tiếp cận dự án đã chạy lâu
+3.&nbsp; Cách tiếp cận dự án đã được 1 bên khác phát triển trước đó
 - Kết hợp giữa cách làm `thủ công(đọc tài liệu, sử dụng trực tiếp sản phẩm , tương tác trực tiếp qua slack) - 80%` để nắm tổng quát về dự án và logic business, đồng thời dùng `AI(tra repo, tra business) - 20%` để có thể nắm thông tin về logic của màn hình, validation của từng fields
-- Chủ động sắp xếp các cuộc meeting ngắng tầm 15~30 phút để trao đổi nhanh về những vấn đề chưa hiểu
+- Chủ động sắp xếp các cuộc `meeting ngắn tầm 15~30 phút` để trao đổi nhanh về những vấn đề chưa hiểu
 
 4.&nbsp; Sắp xếp công việc khi có nhiều sản phẩm cần xử lý
 - Phân chia tài liệu DD theo từng category riêng để dễ dàng nắm bắt nội dung cần thiết một cách có hệ thống
 - Tận dụng chức năng `Documents` của backlogs để list up đầu công việc và báo cáo theo format đơn giản theo khoảng thời gian: tuần này, tuần sau
 - Chủ động trao đổi ngắn với PM Việt Nam(tầm 5~10 phút) để nắm tình hình nội bộ trước ngày họp 1 ngày, từ đó để làm cơ sở trao đổi và sắp xếp công việc với bên Nhật
 
-5.&nbsp; Sự cởi mở khi trước bắt đầu start dự án
+5.&nbsp; Hiểu được sự cởi mở ban đầu sẽ xoá được bất đồng sau này
 - Việc phía Nhật chủ động qua Việt Nam để chia sẻ know-how, khó khăn của dự án trước đó, quan điểm của 2 bên từ việc review code đến cách test đã giúp xoá đi điểm mập mờ 2 bên
+- Khi làm việc thẳng thắn trao đổi những vấn đề không rõ để tránh sai xót về logic, về cách code, vv sau này, từ đó xây dựng được sự tin tưởng
 
 
 <---ja--->

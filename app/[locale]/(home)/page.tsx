@@ -45,7 +45,7 @@ export default function Home() {
       <div className="content-parent">
         <div className="content-col-1">
           <div className="box">
-            <div className="title">
+            <div className="hp-title">
               <span>{t("experienceTitle")}</span>
             </div>
             <div className="sub-items">
@@ -68,7 +68,7 @@ export default function Home() {
         </div>
         <div className="content-col-2">
           <div className="box">
-            <div className="title">
+            <div className="hp-title">
               <span>{t("projectsTitle")}</span>
             </div>
             <div className="sub-items">
