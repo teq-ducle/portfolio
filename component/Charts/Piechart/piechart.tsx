@@ -6,18 +6,24 @@ import {
   Chart as ChartJS,
   ArcElement,
   Tooltip,
-  Legend
+  Legend,
+  // layouts,
+  TooltipItem,
+  ChartOptions,
 } from "chart.js";
-import { CategoryStats } from "@/app/utils/graph";
+import { Stats } from "@/app/utils/graph";
+import "./piechart.css";
+import { PieLegend } from "./legend";
 
 // Register chart components
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 interface Props {
-  stats: CategoryStats;
+  graphTitle: string;
+  stats: Stats;
 }
 
-const CategoryPieChart: React.FC<Props> = ({ stats }) => {
+const PieChart: React.FC<Props> = ({ graphTitle, stats }) => {
   const categories = Object.keys(stats);
   const counts = Object.values(stats);
 
@@ -36,21 +42,26 @@ const CategoryPieChart: React.FC<Props> = ({ stats }) => {
         ],
         borderColor: "#fff",
         borderWidth: 1,
+        radius: "80%",
       },
     ],
   };
 
-  const options = {
+  const options: ChartOptions<"pie"> = {
     responsive: true,
+    maintainAspectRatio: false,
+    layout: {
+      padding: 0,
+    },
     plugins: {
       legend: {
-        position: "bottom" as const,
+        display: false,
       },
       tooltip: {
         callbacks: {
-          label: function (context: any) {
+          label: (context: TooltipItem<"pie">) => {
+            const label = context.label ?? "";
             const value = context.parsed;
-            const label = context.label || "";
             return `${label}: ${value}`;
           },
         },
@@ -59,10 +70,17 @@ const CategoryPieChart: React.FC<Props> = ({ stats }) => {
   };
 
   return (
-    <div style={{ maxWidth: "200px", margin: "0 auto" }}>
-      <Pie data={data} options={options} />
+    <div className="graph-wrap">
+      <h1>{graphTitle}</h1>
+      <div className="piechart">
+        <Pie data={data} options={options} />
+      </div>
+      <PieLegend
+        labels={categories}
+        colors={data.datasets[0].backgroundColor as string[]}
+      />
     </div>
   );
 };
 
-export default CategoryPieChart;
+export default PieChart;

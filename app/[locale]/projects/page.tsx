@@ -1,19 +1,19 @@
 import MainProject from "@/component/Project";
 import { dataProjects } from "@/app/constants";
 import "./projects.css";
-import CategoryPieChart from "@/component/Charts/Piechart";
-import { getCategoryStats } from "@/app/utils/graph";
+import { getCategoryStats, getTechStackStats } from "@/app/utils/graph";
+import { PieChart } from "@/component/Charts";
 
-const stats = await getCategoryStats();
+const categoryStats = await getCategoryStats();
+const techStackStats = await getTechStackStats();
 export default function Projects() {
-
   return (
     <div>
-      <div>
-        <h1>Project Categories</h1>
-        <CategoryPieChart stats={stats} />
+      <div className="graphs">
+        <PieChart graphTitle="Business Domain" stats={categoryStats} />
+        <PieChart graphTitle="Tech Stack" stats={techStackStats} />
       </div>
-      <h1 className="page_title">Projects</h1>
+      <h1>Projects</h1>
       <p className="page_description"></p>
       <div className="projects">
         {dataProjects.map((item) => (

@@ -1,0 +1,21 @@
+.piechart {
+  width: 200px;
+  height: 200px;
+}
+
+.pie-legend {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 8px 16px;
+  margin-top: 12px;
+  font-size: 12px;
+}
+.pie-legend li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.pie-legend .dot {
+  width: 12px;
+  height: 12px;
+}
