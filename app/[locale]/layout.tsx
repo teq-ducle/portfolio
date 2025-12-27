@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import "../globals.css";
+import "@/app/globals.css";
 import Header from "@/component/Header";
 import Footer from "@/component/Footer";
 import { ThemeProvider } from "next-themes";
@@ -62,26 +62,39 @@ export default async function LocaleLayout({
   const messages = locale === "ja" ? jaMessages : viMessages;
 
   return (
-    <html lang={locale} suppressHydrationWarning>
-      <body className={notoSans.className}>
-        <NextIntlClientProvider
-          key={locale}
-          locale={locale}
-          messages={messages}
-        >
-          <ThemeProvider
-            attribute="data-theme"
-            defaultTheme="light"
-            enableSystem
-            disableTransitionOnChange
-            enableColorScheme={false}
-          >
-            <Header />
-            <div className="wrap">{children}</div>
-            <Footer />
-          </ThemeProvider>
-        </NextIntlClientProvider>
-      </body>
-    </html>
+    // <html lang={locale} suppressHydrationWarning>
+    //   <body className={notoSans.className}>
+    //     <NextIntlClientProvider
+    //       key={locale}
+    //       locale={locale}
+    //       messages={messages}
+    //     >
+    //       <ThemeProvider
+    //         attribute="data-theme"
+    //         defaultTheme="light"
+    //         enableSystem
+    //         disableTransitionOnChange
+    //         enableColorScheme={false}
+    //       >
+    //         <Header />
+    //         <div className="wrap">{children}</div>
+    //         <Footer />
+    //       </ThemeProvider>
+    //     </NextIntlClientProvider>
+    //   </body>
+    // </html>
+    <NextIntlClientProvider key={locale} locale={locale} messages={messages}>
+      <ThemeProvider
+        attribute="data-theme"
+        defaultTheme="light"
+        enableSystem
+        disableTransitionOnChange
+        enableColorScheme={false}
+      >
+        <Header />
+        <div className={`${notoSans.className} wrap`}>{children}</div>
+        <Footer />
+      </ThemeProvider>
+    </NextIntlClientProvider>
   );
 }
