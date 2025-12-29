@@ -1,18 +1,21 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import MainProject from "@/component/Project";
+import Project from "@/component/Project";
 import { PieChart } from "@/component/Charts";
-import { dataProjects } from "@/app/constants";
+// import { dataProjects } from "@/app/constants";
 import { Stats } from "@/app/utils/graph";
 import "./projects.css";
 
 export default function ProjectClient({
   categoryStats,
   techStackStats,
+  datas,
 }: {
   categoryStats: Stats;
   techStackStats: Stats;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  datas: any[];
 }) {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(
     () => {
@@ -30,10 +33,33 @@ export default function ProjectClient({
     }
   }, [selectedCategory]);
 
+  // // eslint-disable-next-line react-hooks/preserve-manual-memoization
+  // const filteredProjects = useMemo(() => {
+  //   // if (!selectedCategory) return dataProjects;
+  //   if (!selectedCategory) return datas;
+
+  //   // return dataProjects.filter(
+  //   //   (p) =>
+  //   //     p.category === selectedCategory || p.tech.includes(selectedCategory)
+  //   // );
+  //   return datas.filter((p) => {
+  //     return (
+  //       p.category === selectedCategory || p.tech.includes(selectedCategory)
+  //     );
+  //   });
+  //   // return datas.filter(
+  //   //   p.category === selectedCategory || p.tech.includes(selectedCategory)
+  //   // );
+  // }, [selectedCategory]);
+
   const filteredProjects = useMemo(() => {
-    if (!selectedCategory) return dataProjects;
-    return dataProjects.filter((p) => p.category === selectedCategory);
-  }, [selectedCategory]);
+    if (!selectedCategory) return datas;
+    return datas.filter((i) => {
+      return (
+        i.category === selectedCategory || i.tech.includes(selectedCategory)
+      );
+    });
+  }, [selectedCategory, datas]);
 
   return (
     <div>
@@ -62,7 +88,14 @@ export default function ProjectClient({
 
       <div className="projects">
         {filteredProjects.map((item) => (
-          <MainProject key={item.id} {...item} type="main" />
+          <Project
+            key={item.id}
+            image={item.image}
+            title={item.titleVI}
+            url={item.url}
+            description={item.descriptionVI}
+            type={"main"}
+          />
         ))}
       </div>
     </div>

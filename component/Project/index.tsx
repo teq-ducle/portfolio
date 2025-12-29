@@ -23,12 +23,12 @@ Project(props: ProjectProps) {
               <Image src={image} alt="logo" width={42} height={42} />
             </div>
             <div>
-              <span className="title">{title}</span>
+              <span className="project-title">{title}</span>
             </div>
           </div>
           <div className="card-body">
             <div>
-              <span className="description">{description}</span>
+              <span className="project-description">{description}</span>
             </div>
           </div>
         </Link>
@@ -36,7 +36,7 @@ Project(props: ProjectProps) {
         <Link href={url} className="card sub">
           <Image src={image} alt="logo" width={42} height={42} />
           <div className="content">
-            <p className="title">{title}</p>
+            <p className="project-title">{title}</p>
             <p className="sub-project-description">{description}</p>
           </div>
         </Link>

@@ -56,8 +56,6 @@ const PieChart: React.FC<Props> = ({ graphTitle, stats, onSelectCategory }) => {
       const index = elements[0].index;
       const category = categories[index];
       onSelectCategory?.(category);
-      console.log("index: ", index);
-      console.log("category", category);
     },
     plugins: {
       legend: {

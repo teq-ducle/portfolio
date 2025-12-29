@@ -23,21 +23,47 @@ const getDataContentMD = async (id: string) => {
 
     return {
       id: data.id,
-      slug: data.slug,
       titleVI: data.titleVI,
-      titleJP: data.titleJP,
       descriptionVI: data.descriptionVI,
+      titleJP: data.titleJP,
       descriptionJP: data.descriptionJP,
-      tech: data.tech || [], // for project
-      tag: data.tag || [], // for blog
       link: data.link || "", // for project
+      tech: data.tech || [], // for project
       date: data.date,
+      slug: data.slug,
       image: data.image,
-      content, // for project
+      category: data.category,
+      content,
     };
   });
 
   return data.find((i) => i.id === id) || null;
+};
+
+const getListMarkdownData = async () => {
+  const filesDir = await path.join(process.cwd(), "app/contents/projects");
+  const files = fs.readdirSync(filesDir).filter((file) => file.endsWith(".md"));
+
+  const listFilesWithMetadata = files.map((file) => {
+    const filePath = path.join(filesDir, file);
+    const fileContent = fs.readFileSync(filePath, "utf-8");
+    const { data } = matter(fileContent);
+    return {
+      id: data.id,
+      titleVI: data.titleVI,
+      descriptionVI: data.descriptionVI,
+      titleJP: data.titleJP,
+      descriptionJP: data.descriptionJP,
+      link: data.link || "", // for project
+      tech: data.tech || [], // for project
+      date: data.date,
+      slug: data.slug,
+      image: data.image,
+      category: data.category,
+      url: data.url,
+    };
+  });
+  return listFilesWithMetadata;
 };
 
 // function splitByLocale(raw: string) {
@@ -88,4 +114,4 @@ const getDataContentMD = async (id: string) => {
 //   };
 // };
 
-export { getDataContentMD };
+export { getDataContentMD, getListMarkdownData };

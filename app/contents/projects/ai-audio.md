@@ -1,17 +1,18 @@
 ---
-id: "insurance-school"
-titleVI: "Bảo hiểm trường học"
-descriptionVI: "Dự án bảo hiểm dành cho học sinh, dùng để đăng ký và quản lý hợp đồng bảo hiểm và đối tượng của sản phẩm trải dài từ cấp từ mẫu giáo đến đại học."
-titleJP: "学校・こども総合保険・・・学校に通う子供を持つ保護者が加入する保険"
-descriptionJP: "学校・こども総合保険・・・学校に通う子供を持つ保護者が加入する保険"
+id: "ai-audio"
+titleVI: "Hệ thống tích hợp AI để phân tích ghi âm của công ty chứng khoán"
+descriptionVI: "Hệ thống lưu trữ, tạo ghi âm, tích hợp AI vào phân tích nội dung audio để suggest thông tin dựa vào hồ sơ khách hàng"
+titleJP: ""
+descriptionEN: ""
 link: ""
-tech: ["VueJS"]
-date: "2025-07-01"
+tech: ["NuxtJS", "SCSS"]
+date: "2021-04-03"
 slug: ""
-image: "/projects/insurance-school.png"
-category: "Insurance Tech"
-url: "/projects/insurance-school"
+image: "/projects/ai-audio.png"
+category: "AI"
+url: "/projects/ai-audio"
 ---
+
 <---vi--->
 # I. Giới thiệu chung
 Bảo hiểm trường học là tên chung của một dự án lớn, trong đó được chia thành nhiều phần nhỏ hơn tương ứng với mỗi ngôi trường để phù hợp cho nhu cầu của từng trường.
@@ -88,14 +89,5 @@ Dự án được bên mình tiếp nhận vào giữa năm 2025 để đáp ứ
 - Việc phía Nhật chủ động qua Việt Nam để chia sẻ know-how, khó khăn của dự án trước đó, quan điểm của 2 bên từ việc review code đến cách test đã giúp xoá đi điểm mập mờ 2 bên
 - Khi làm việc thẳng thắn trao đổi những vấn đề không rõ để tránh sai xót về logic, về cách code, vv sau này, từ đó xây dựng được sự tin tưởng
 
-
 <---ja--->
-## I. 概要
-(大学・大学院). 
-
-(大学・大学院). (大学・大学院). (大学・大学院). (大学・大学院). 
-## II. プロジェクト特徴
-### 1. 技術
-### 2. 人
-
-## III. 達成した点
+JA

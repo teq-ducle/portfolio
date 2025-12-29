@@ -8,8 +8,9 @@ link: ""
 tech: ["NuxtJS", "SCSS"]
 date: "2025-10-10"
 slug: ""
-image: ""
+image: "/projects/insurance-influenza.png"
 category: "Insurance Tech"
+url: "/projects/insurance-influenza"
 ---
 <---vi--->
 # I. Giới thiệu chung

@@ -49,14 +49,13 @@ const Header: React.FC = () => {
       <div className="styles_ctnLeftHeader">
         <Link href={"/"} className="logo-ctn">
           <Image
-            src={"/personal.png"}
+            src={"/me.jpeg"}
             className="logo"
             alt="logo"
-            width={34}
-            height={34}
+            width={48}
+            height={48}
           />
         </Link>
-        <span>LÊ TRUNG ĐỨC</span>
       </div>
 
       <nav className="styles_nav">

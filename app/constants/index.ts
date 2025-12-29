@@ -7,7 +7,8 @@ const dataProjects = [
     description:
       "Dự án bảo hiểm dành cho học sinh, dùng để đăng ký và quản lý hợp đồng bảo hiểm và đối tượng của sản phẩm trải dài từ cấp từ mẫu giáo đến đại học.",
     url: "/projects/insurance-school",
-    category: "Insurance Tech"
+    category: "Insurance Tech",
+    tech: ["NuxtJS", "SCSS"],
   },
   {
     id: 2,
@@ -16,7 +17,8 @@ const dataProjects = [
     description:
       "Dự án bảo hiểm dành cho thiết bị điện tử(điện thoại, tablet, camera,...), dùng để đăng ký và quản lý hợp đồng bảo hiểm và yêu cầu thanh toán bảo hiểm khi gặp sự cố",
     url: "/projects/insurance-influenza",
-    category: "Insurance Tech"
+    category: "Insurance Tech",
+    tech: ["NuxtJS", "SCSS"],
   },
   {
     id: 3,
@@ -25,14 +27,15 @@ const dataProjects = [
     description:
       "Dự án bảo hiểm dành cho thiết bị điện tử(điện thoại, tablet, camera,...), dùng để đăng ký và quản lý hợp đồng bảo hiểm và yêu cầu thanh toán bảo hiểm khi gặp sự cố",
     url: "/projects/insurance-school3",
-    category: "Not Insurance Tech"
+    category: "Not Insurance Tech",
+    tech: ["xyz", "abc"],
   },
 ];
 
 const dataExperience = [
   {
     id: 1,
-    image: "/personal.png",
+    image: "/companies/teq.jpeg",
     position: "BrSE",
     company: "Teqnological Asia",
     startDate: "2024-05-01",
@@ -43,7 +46,7 @@ const dataExperience = [
   },
   {
     id: 2,
-    image: "/personal.png",
+    image: "/companies/techtus.jpeg",
     position: "BrSE",
     company: "IT comtor / BrSE",
     startDate: "2022-10-01",
