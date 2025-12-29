@@ -52,8 +52,8 @@ const Header: React.FC = () => {
             src={"/me.jpeg"}
             className="logo"
             alt="logo"
-            width={48}
-            height={48}
+            width={40}
+            height={40}
           />
         </Link>
       </div>
