@@ -9,9 +9,6 @@ import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import viMessages from "@/messages/vi.json";
 import jaMessages from "@/messages/ja.json";
-import { Suspense } from "react";
-import Loading from "./loading";
-import Head from "next/head";
 
 const notoSans = Noto_Sans({
   subsets: ["latin"],
@@ -62,27 +59,6 @@ export default async function LocaleLayout({
   const messages = locale === "ja" ? jaMessages : viMessages;
 
   return (
-    // <html lang={locale} suppressHydrationWarning>
-    //   <body className={notoSans.className}>
-    //     <NextIntlClientProvider
-    //       key={locale}
-    //       locale={locale}
-    //       messages={messages}
-    //     >
-    //       <ThemeProvider
-    //         attribute="data-theme"
-    //         defaultTheme="light"
-    //         enableSystem
-    //         disableTransitionOnChange
-    //         enableColorScheme={false}
-    //       >
-    //         <Header />
-    //         <div className="wrap">{children}</div>
-    //         <Footer />
-    //       </ThemeProvider>
-    //     </NextIntlClientProvider>
-    //   </body>
-    // </html>
     <NextIntlClientProvider key={locale} locale={locale} messages={messages}>
       <ThemeProvider
         attribute="data-theme"

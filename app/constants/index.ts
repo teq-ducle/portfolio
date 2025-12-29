@@ -6,8 +6,8 @@ const dataProjects = [
     title: "Bảo hiểm trường học",
     description:
       "Dự án bảo hiểm dành cho học sinh, dùng để đăng ký và quản lý hợp đồng bảo hiểm và đối tượng của sản phẩm trải dài từ cấp từ mẫu giáo đến đại học.",
-    // long-description:" Dự án được triển khai trước năm học chính thức bên Nhật, được dùng đăng ký và quản lý bảo hiểm tổng hợp dành cho học sinh và trẻ em của Mitsui Sumitomo Kaijo.\n Dự án này đã được phát triển ở 1 bên khác, sau đó được bên mình tiếp nhận và phát triển tiếp.\n Dự án đã sang phase 3 và sẽ được triển khai hằng năm",
     url: "/projects/insurance-school",
+    category: "Insurance Tech"
   },
   {
     id: 2,
@@ -15,8 +15,8 @@ const dataProjects = [
     title: "Bảo hiểm thiết bị",
     description:
       "Dự án bảo hiểm dành cho thiết bị điện tử(điện thoại, tablet, camera,...), dùng để đăng ký và quản lý hợp đồng bảo hiểm và yêu cầu thanh toán bảo hiểm khi gặp sự cố",
-    // long-description: "",
     url: "/projects/insurance-influenza",
+    category: "Insurance Tech"
   },
   {
     id: 3,
@@ -24,8 +24,8 @@ const dataProjects = [
     title: "Bảo hiểm thiết bị",
     description:
       "Dự án bảo hiểm dành cho thiết bị điện tử(điện thoại, tablet, camera,...), dùng để đăng ký và quản lý hợp đồng bảo hiểm và yêu cầu thanh toán bảo hiểm khi gặp sự cố",
-    // long-description: "",
     url: "/projects/insurance-school3",
+    category: "Not Insurance Tech"
   },
 ];
 
@@ -54,58 +54,6 @@ const dataExperience = [
   },
 ];
 
-// const dataProjects = [
-//   {
-//     id: 1,
-//     image: "/personal.png",
-//     title: "Main project 1",
-//     description:
-//       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-//     url: "/projects/1",
-//   },
-//   {
-//     id: 2,
-//     image: "/personal.png",
-//     title: "Main project 2",
-//     description:
-//       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-//     url: "/projects/2",
-//   },
-// ];
-
-const dataAbout = [
-  {
-    id: 1,
-    date: "2022",
-    title: "Sample1",
-    description: "Sample1",
-  },
-  {
-    id: 2,
-    date: "2023",
-    title: "Sample2",
-    description: "Sample2",
-  },
-  {
-    id: 3,
-    date: "2024",
-    title: "Sample3",
-    description: "Sample1",
-  },
-  {
-    id: 4,
-    date: "2025",
-    title: "Sample4",
-    description: "Sample4",
-  },
-  {
-    id: 5,
-    date: "2026",
-    title: "Sample5",
-    description: "Sample5",
-  },
-];
-
 const dataSkill = [
   { id: 1, name: "Miro" },
   { id: 2, name: "Google Workspace" },
@@ -120,4 +68,4 @@ const dataSkill = [
 
 // const SUPPORTED_LOCALES = ['vi', 'ja'];
 
-export { dataProjects, dataExperience, dataAbout, dataSkill };
+export { dataProjects, dataExperience, dataSkill };

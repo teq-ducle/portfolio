@@ -3,6 +3,7 @@ import path from "path";
 import fs from "fs";
 
 export type Stats = Record<string, number>;
+export type CategoryByProject = Record<string, string[]>;
 
 export const getCategoryStats = async (): Promise<Stats> => {
   const filesDir = await path.join(process.cwd(), "app/contents/projects");
@@ -62,3 +63,26 @@ export const getTechStackStats = async (): Promise<Stats> => {
   3. Lấy frontmatter.category của từng file trong directory và phân loại
   4. Count số lượng category theo từng loại
   */
+
+// Todo
+// export const getProject = async (category: string): string[] => {
+//   const fileDir = await path.join(process.cwd(), "app/contents/projects");
+
+//   const files = fs.readdirSync(fileDir).filter((file) => file.endsWith(".md"));
+
+//   const projectList: CategoryByProject = {};
+
+//   let techList: string[] = [];
+
+//   files.forEach((file) => {
+//     const fullPath = path.join(fileDir, file);
+
+//     const fileContent = fs.readFileSync(fullPath, "utf-8");
+
+//     const { data } = matter(fileContent);
+//     const projectId = data.id;
+//     const tech = data.tech;
+//     techList = techList.concat(tech);
+//     projectList[projectId] = techList;
+//   });
+// };

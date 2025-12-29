@@ -7,7 +7,6 @@ import {
   ArcElement,
   Tooltip,
   Legend,
-  // layouts,
   TooltipItem,
   ChartOptions,
 } from "chart.js";
@@ -21,9 +20,10 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 interface Props {
   graphTitle: string;
   stats: Stats;
+  onSelectCategory?: (category: string) => void;
 }
 
-const PieChart: React.FC<Props> = ({ graphTitle, stats }) => {
+const PieChart: React.FC<Props> = ({ graphTitle, stats, onSelectCategory }) => {
   const categories = Object.keys(stats);
   const counts = Object.values(stats);
 
@@ -49,9 +49,15 @@ const PieChart: React.FC<Props> = ({ graphTitle, stats }) => {
 
   const options: ChartOptions<"pie"> = {
     responsive: true,
-    maintainAspectRatio: false,
-    layout: {
-      padding: 0,
+    // maintainAspectRatio: false,
+    onClick: (_, elements) => {
+      if (!elements.length) return;
+
+      const index = elements[0].index;
+      const category = categories[index];
+      onSelectCategory?.(category);
+      console.log("index: ", index);
+      console.log("category", category);
     },
     plugins: {
       legend: {
@@ -60,9 +66,10 @@ const PieChart: React.FC<Props> = ({ graphTitle, stats }) => {
       tooltip: {
         callbacks: {
           label: (context: TooltipItem<"pie">) => {
-            const label = context.label ?? "";
+            // const label = context.label ?? "";
             const value = context.parsed;
-            return `${label}: ${value}`;
+            // return `${label}: ${value}`;
+            return `${value}`;
           },
         },
       },
