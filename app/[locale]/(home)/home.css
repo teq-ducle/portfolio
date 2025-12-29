@@ -17,5 +17,17 @@
 .seemore:hover {
   color: var(--main);
   border-color: var(--main);
-  background-color: rgba(0,0,0,0);
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.hp-title {
+  font-weight: bold;
+  color: var(--main);
+  display: flex;
+  justify-content: center;
+}
+
+.hp-title > span:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }

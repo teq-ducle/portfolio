@@ -73,7 +73,6 @@ a {
 }
 
 .wrap {
-  /* background-color: var(--bg-color); */
   width: 100vw;
   max-width: 1024px;
   margin: 0 auto;
@@ -107,15 +106,6 @@ a {
   border-radius: 8px;
   padding: 24px;
   gap: 10px;
-}
-
-.hp-title {
-  font-weight: bold;
-  color: var(--main);
-}
-
-.hp-title > span:hover {
-  text-decoration: underline;
 }
 
 .space-between-graph {

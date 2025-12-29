@@ -9,7 +9,7 @@ import { formatExperienceDuration } from "@/app/utils/formatExperienceDuration";
 import Skill from "@/component/Skill";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
-import "./home.css"
+import "./home.css";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default function HomePageClient({ data }: { data: any[] }) {
@@ -89,7 +89,9 @@ export default function HomePageClient({ data }: { data: any[] }) {
               </div>
             </div>
             <div>
-              <Link href={"/projects"} className="seemore">See All Projects</Link>
+              <Link href={"/projects"} className="seemore">
+                See All Projects
+              </Link>
               {/* <Button
                 text={t("seeAllProjects")}
                 type={"readmore"}
@@ -98,7 +100,9 @@ export default function HomePageClient({ data }: { data: any[] }) {
             </div>
           </div>
           <div className="box">
-            <p className="title">{t("skillsTitle")}</p>
+            <p className="hp-title">
+              <span>{t("skillsTitle")}</span>
+            </p>
             <div className="skill-items">
               {dataSkill.map((item) => (
                 <Skill key={item.id} name={item.name} />

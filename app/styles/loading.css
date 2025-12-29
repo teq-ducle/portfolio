@@ -4,9 +4,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  /* Thay thế màu tĩnh bằng màu nền của root theme */
+  background: var(--bg-root); 
   position: fixed;
   inset: 0;
+  z-index: 9999;
 }
 
 .circle-border {
@@ -17,11 +19,13 @@
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  background: rgb(63, 249, 220);
+  
+  /* Sử dụng màu --main (cam) làm chủ đạo */
+  /* Gradient từ mờ đến rõ của màu --main */
   background: linear-gradient(
     0deg,
-    rgba(63, 249, 220, 0.1) 33%,
-    rgba(63, 249, 220, 1) 100%
+    rgba(255, 92, 57, 0.1) 33%, /* Giá trị RGBA của #ff5c39 */
+    var(--main) 100%
   );
   animation: spin 0.8s linear 0s infinite;
 }
@@ -29,7 +33,8 @@
 .circle-core {
   width: 100%;
   height: 100%;
-  background-color: #1d2630;
+  /* Quan trọng: Màu lõi phải trùng với màu nền chính của theme để tạo hiệu ứng rỗng */
+  background-color: var(--bg-root);
   border-radius: 50%;
 }
 
@@ -41,3 +46,4 @@
     transform: rotate(359deg);
   }
 }
+

@@ -7,7 +7,7 @@
   cursor: pointer;
   width: 100%;
   padding: 12px;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .card:hover {
@@ -17,7 +17,7 @@
 .card-header {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 8px;
   margin-bottom: 16px;
 }
 
