@@ -3,7 +3,6 @@
 // import SubProject from "@/component/Project/SubProject";
 import Project from "@/component/Project";
 import Experience from "@/component/Experience";
-import Button from "@/component/Button";
 import { dataExperience, dataSkill } from "@/app/constants";
 import { formatExperienceDuration } from "@/app/utils/formatExperienceDuration";
 import Skill from "@/component/Skill";
@@ -92,11 +91,6 @@ export default function HomePageClient({ data }: { data: any[] }) {
               <Link href={"/projects"} className="seemore">
                 See All Projects
               </Link>
-              {/* <Button
-                text={t("seeAllProjects")}
-                type={"readmore"}
-                url={"/projects"}
-              /> */}
             </div>
           </div>
           <div className="box">
