@@ -160,7 +160,7 @@ a {
   margin: 0 auto;
 }
 
-.greeting {
+/* .greeting {
   position: fixed;
   inset: 0;
   background-color: black;
@@ -180,4 +180,4 @@ a {
     opacity: 0;
     visibility: hidden;
   }
-}
+} */
