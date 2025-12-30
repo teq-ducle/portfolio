@@ -1,0 +1,25 @@
+.contact-ctn {
+  height: 48px;
+  display: flex;
+  align-items: center;
+}
+
+.contact-icon {
+  border-radius: 8px;
+  cursor: pointer;
+
+  /* Quan trọng: Thiết lập chuyển động mượt mà */
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+
+  /* Bóng mờ mặc định (nhẹ) */
+  /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); */
+  box-shadow: var(--shadow);
+}
+
+.contact-icon:hover {
+  /* Đẩy ảnh lên trên 15px */
+  transform: translateY(-8px);
+
+  /* Tạo bóng mờ đậm và rộng hơn ở dưới */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12), 0 10px 15px var(--main);
+}

@@ -1,36 +1,36 @@
 /* eslint-disable import/no-anonymous-default-export */
-const dataProjects = [
-  {
-    id: 1,
-    image: "/personal.png",
-    title: "Bảo hiểm trường học",
-    description:
-      "Dự án bảo hiểm dành cho học sinh, dùng để đăng ký và quản lý hợp đồng bảo hiểm và đối tượng của sản phẩm trải dài từ cấp từ mẫu giáo đến đại học.",
-    url: "/projects/insurance-school",
-    category: "Insurance Tech",
-    tech: ["NuxtJS", "SCSS"],
-  },
-  {
-    id: 2,
-    image: "/personal.png",
-    title: "Bảo hiểm thiết bị",
-    description:
-      "Dự án bảo hiểm dành cho thiết bị điện tử(điện thoại, tablet, camera,...), dùng để đăng ký và quản lý hợp đồng bảo hiểm và yêu cầu thanh toán bảo hiểm khi gặp sự cố",
-    url: "/projects/insurance-influenza",
-    category: "Insurance Tech",
-    tech: ["NuxtJS", "SCSS"],
-  },
-  {
-    id: 3,
-    image: "/personal.png",
-    title: "Bảo hiểm thiết bị",
-    description:
-      "Dự án bảo hiểm dành cho thiết bị điện tử(điện thoại, tablet, camera,...), dùng để đăng ký và quản lý hợp đồng bảo hiểm và yêu cầu thanh toán bảo hiểm khi gặp sự cố",
-    url: "/projects/insurance-school3",
-    category: "Not Insurance Tech",
-    tech: ["xyz", "abc"],
-  },
-];
+// const dataProjects = [
+//   {
+//     id: 1,
+//     image: "/personal.png",
+//     title: "Bảo hiểm trường học",
+//     description:
+//       "Dự án bảo hiểm dành cho học sinh, dùng để đăng ký và quản lý hợp đồng bảo hiểm và đối tượng của sản phẩm trải dài từ cấp từ mẫu giáo đến đại học.",
+//     url: "/projects/insurance-school",
+//     category: "Insurance Tech",
+//     tech: ["NuxtJS", "SCSS"],
+//   },
+//   {
+//     id: 2,
+//     image: "/personal.png",
+//     title: "Bảo hiểm thiết bị",
+//     description:
+//       "Dự án bảo hiểm dành cho thiết bị điện tử(điện thoại, tablet, camera,...), dùng để đăng ký và quản lý hợp đồng bảo hiểm và yêu cầu thanh toán bảo hiểm khi gặp sự cố",
+//     url: "/projects/insurance-influenza",
+//     category: "Insurance Tech",
+//     tech: ["NuxtJS", "SCSS"],
+//   },
+//   {
+//     id: 3,
+//     image: "/personal.png",
+//     title: "Bảo hiểm thiết bị",
+//     description:
+//       "Dự án bảo hiểm dành cho thiết bị điện tử(điện thoại, tablet, camera,...), dùng để đăng ký và quản lý hợp đồng bảo hiểm và yêu cầu thanh toán bảo hiểm khi gặp sự cố",
+//     url: "/projects/insurance-school3",
+//     category: "Not Insurance Tech",
+//     tech: ["xyz", "abc"],
+//   },
+// ];
 
 const dataExperience = [
   {
@@ -69,6 +69,12 @@ const dataSkill = [
   { id: 9, name: "English" },
 ];
 
+const dataContact = [
+  {id: 1, img: "/contacts/github.png", url: "https://github.com/teq-ducle"},
+  {id: 2, img: "/contacts/linkedin.png", url: "https://www.linkedin.com/in/duc-le-trung-313012203/"},
+  {id: 3, img: "/contacts/gmail.png", url: "mailto:letrungducshizuoka@gmail.com"}
+]
+
 // const SUPPORTED_LOCALES = ['vi', 'ja'];
 
-export { dataProjects, dataExperience, dataSkill };
+export { dataExperience, dataSkill, dataContact};

@@ -3,13 +3,13 @@
 // import SubProject from "@/component/Project/SubProject";
 import Project from "@/component/Project";
 import Experience from "@/component/Experience";
-import { dataExperience, dataSkill } from "@/app/constants";
+import { dataExperience, dataSkill, dataContact } from "@/app/constants";
 import { formatExperienceDuration } from "@/app/utils/formatExperienceDuration";
 import Skill from "@/component/Skill";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 import "./home.css";
-
+import Social from "@/component/Social";
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default function HomePageClient({ data }: { data: any[] }) {
   const t = useTranslations("HomePage");
@@ -64,6 +64,20 @@ export default function HomePageClient({ data }: { data: any[] }) {
                   )}
                   place={item.place}
                   description={item.description}
+                />
+              ))}
+            </div>
+          </div>
+          <div className="box">
+            <div className="hp-title">
+              <span>{t("contactTitle")}</span>
+            </div>
+            <div className="contact-items">
+              {dataContact.map((item) => (
+                <Social 
+                key={item.id}
+                img={item.img}
+                url={item.url}
                 />
               ))}
             </div>
