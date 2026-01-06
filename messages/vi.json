@@ -4,7 +4,7 @@
     "name": "Đức",
     "intro1": "Tôi là",
     "position": "BrSE - Bridge Software Engineer",
-    "experience": "{yoe}+ năm kinh nghiệm",
+    "experience": "{yoe}+ năm kinh nghiệm trong vai trò",
     "intro2": "Mảng chủ yếu tham gia là",
     "mainField": "Offshore Software Development",
     "intro3": "và business domain chủ yếu là",
@@ -13,17 +13,13 @@
     "projectsTitle": "Projects",
     "skillsTitle": "Skills",
     "seeAllProjects": "See all projects",
-    "notFound": "Page not found",
-    "contactTitle": "Contact"
+    "notFound": "Page not found"
   },
   "Navigation": {
     "home": "Trang chủ",
     "about": "Về tôi",
     "projects": "Dự án",
     "now": "Hiện tại"
-  },
-  "Footer": {
-    "copyright": "© 2024 Đức. All rights reserved."
   },
   "NotFound": {
     "title": "Trang không tìm thấy",
@@ -34,5 +30,27 @@
     "purpose": "Vì luôn tò mò về công nghệ(vì không biết gì cả), nên tôi làm ra trang này để giới thiệu bản thân nhưng cũng là nơi để ghi lại chặng đường của tôi trong ngành này.",
     "brseRole": "Với vai trò BrSE trong dự án, không chỉ mang nhiệm vụ truyền đạt thông tin đúng và đủ, tôi còn phải là người hỗ trợ trong việc quản lý tiến độ công việc, đưa ra ý kiến về những vấn đề nhân sự trong team. Nói chung là làm thợ đụng(ngoài code)",
     "webDevelopment": "Website Development"
-  }
+  },
+  "Experience": [
+    {
+      "id": 1,
+      "image": "/companies/teq.jpeg",
+      "position": "BrSE",
+      "company": "Teqnological Asia",
+      "startDate": "2024-05-01",
+      "endDate": null,
+      "place": "Thành phố Hồ Chí Minh, Việt Nam",
+      "description": "Với vai trò là BrSE, trách nhiệm chính của mình là truyền đạt thông tin dự án một cách rõ ràng với đối tác Nhật Bản để phần mềm được phát triển theo đúng yêu cầu của khách hàng.\n Đồng thời, mình cũng phải là người tạo ra các tài liệu chi tiết để nhóm phát triển có thể triển khai chính xác; quản lý tình trạng dự án để cả hai nhóm có thể thấy rõ tiến độ của nhau."
+    },
+    {
+      "id": 2,
+      "image": "/companies/techtus.jpeg",
+      "position": "BrSE",
+      "company": "IT comtor / BrSE",
+      "startDate": "2022-10-01",
+      "endDate": "2024-04-01",
+      "place": "Thành phố Đà Nẵng, Việt Nam",
+      "description": "Với vai trò là IT comtor, trách nhiệm chính của mình là dịch các cuộc trao đổi giữa bên team Việt Nam và khách hàng Nhật Bản. Thêm nữa, mình cũng phải chuẩn bị tài liệu đặc tả chi tiết để team dev có thể phát triển.\n Qua thời gian, mình được tham gia 2 dự án với tư cách BrSE, đảm nhiệm chính trong việc quản lý và báo cáo tiến độ dự án trực tiếp cho khách hàng Nhật và cấp trên ở Việt Nam"
+    }
+  ]
 }

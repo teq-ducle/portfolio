@@ -9,6 +9,7 @@
   border: 1px solid var(--border-color);
   background-color: transparent;
   font-weight: bold;
+  margin-right: 2px;
 
   /* Thiết lập nền cho hiệu ứng */
   background-image: linear-gradient(to right, var(--main) 50%, transparent 50%);

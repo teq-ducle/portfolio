@@ -2,6 +2,7 @@ import React from "react";
 import "@/app/styles/footer.css"
 
 const Footer: React.FC = () => {
-  return <div className="footer">Duc Le @2025</div>;
+  const currentYear = (new Date()).getFullYear();
+  return <div className="footer">© {currentYear} Le Trung Duc. All Rights Reserved.</div>;
 };
 export default Footer;
