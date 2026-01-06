@@ -20,6 +20,7 @@ export default function HomePageClient({ data }: { data: any[] }) {
   const today = new Date();
   // const data = await getListMarkdownData();
   const { locale } = useParams();
+  console.log(typeof locale);
   const messages = locale === "vi" ? viMessages : jaMessages;
   const experiences = messages.Experience;
 
@@ -67,7 +68,7 @@ export default function HomePageClient({ data }: { data: any[] }) {
                   image={ex.image}
                   position={ex.position}
                   company={ex.company}
-                  duration={formatExperienceDuration(ex.startDate, ex.endDate)}
+                  duration={formatExperienceDuration(ex.startDate, ex.endDate, locale)}
                   place={ex.place}
                   description={ex.description}
                 />

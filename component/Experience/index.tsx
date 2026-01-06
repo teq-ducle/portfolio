@@ -15,9 +15,10 @@ interface ExperienceProps {
 function Experience(props: ExperienceProps) {
   const { image, position, company, duration, place, description } = props;
   const [show, setShow] = useState(false);
+  const toggleShow = () => setShow(prev => !prev);
 
   return (
-    <div className="card-experience">
+    <div className="card-experience" onClick={toggleShow}>
       <Image src={image} alt="logo" width={42} height={42} />
       <div className="content">
         <div className="basic-info">
@@ -37,16 +38,11 @@ function Experience(props: ExperienceProps) {
         <div className="detail">
           <div
             className={
-              show === false ? "description description-line" : "description"
+              show === false ? "description description-hide" : "description"
             }
           >
             <span className="description-text">{description}</span>
           </div>
-          {show === false && (
-            <span onClick={() => setShow(true)}>
-              <button className="inline-see-more-button">...see more</button>
-            </span>
-          )}
         </div>
       </div>
     </div>
