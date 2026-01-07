@@ -11,10 +11,18 @@ export const dataSkill = [
 ];
 
 export const dataContact = [
-  {id: 1, img: "/contacts/github.png", url: "https://github.com/teq-ducle"},
-  {id: 2, img: "/contacts/linkedin.png", url: "https://www.linkedin.com/in/duc-le-trung-313012203/"},
-  {id: 3, img: "/contacts/gmail.png", url: "mailto:letrungducshizuoka@gmail.com"}
-]
+  { id: 1, img: "/contacts/github.png", url: "https://github.com/teq-ducle" },
+  {
+    id: 2,
+    img: "/contacts/linkedin.png",
+    url: "https://www.linkedin.com/in/duc-le-trung-313012203/",
+  },
+  {
+    id: 3,
+    img: "/contacts/gmail.png",
+    url: "mailto:letrungducshizuoka@gmail.com",
+  },
+];
 
 export type SupportedLocale = "vi" | "ja";
 
@@ -26,5 +34,14 @@ export interface LocaleLables {
 
 export const localeLabels: Record<SupportedLocale, LocaleLables> = {
   vi: { current: "Hiện tại", year: "năm", month: "tháng" },
-  ja: { current: "現在", year: "年", month: "ヶ月" }
-}
+  ja: { current: "現在", year: "年", month: "ヶ月" },
+};
+
+export const dataMenu = [
+  {
+    id: "projects",
+    nameVN: "Projects",
+    nameJP: "プロジェクト",
+    path: "/projects",
+  },
+];

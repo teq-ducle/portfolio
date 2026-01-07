@@ -3,7 +3,7 @@
 // import SubProject from "@/component/Project/SubProject";
 import Project from "@/component/Project";
 import Experience from "@/component/Experience";
-import { dataSkill, dataContact } from "@/app/constants";
+import { dataSkill, dataContact } from "@/constants";
 import { formatExperienceDuration } from "@/app/utils/formatExperienceDuration";
 import Skill from "@/component/Skill";
 import { useTranslations } from "next-intl";

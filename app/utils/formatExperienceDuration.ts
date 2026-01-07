@@ -1,4 +1,4 @@
-import { localeLabels } from "./../constants/index";
+import { localeLabels } from "../../constants/index";
 import { ParamValue } from "next/dist/server/request/params";
 
 // import { LocaleLables, SupportedLocale } from "../constants";

@@ -5,6 +5,8 @@ import "@/app/styles/header.css";
 import Image from "next/image";
 import ThemeSwitcher from "../ThemeSwitcher";
 import LanguageSwitcher from "../LanguageSwitcher";
+import { useParams } from "next/navigation";
+import { dataMenu } from "@/constants";
 
 // const dataMenu = [
 //   {
@@ -15,13 +17,15 @@ import LanguageSwitcher from "../LanguageSwitcher";
 // ];
 
 const Header: React.FC = () => {
-  const dataMenu = [
-  {
-    id: "projects",
-    name: "Projects",
-    path: "/projects",
-  },
-];
+  const { locale } = useParams();
+  // const dataMenu = [
+  //   {
+  //     id: "projects",
+  //     nameVN: "Projects",
+  //     nameJP: "プロジェクト",
+  //     path: "/projects",
+  //   },
+  // ];
   const pathname = usePathname(); // 2. Get current path
 
   const [isVisible, setIsVisible] = useState(true);
@@ -74,7 +78,7 @@ const Header: React.FC = () => {
                 pathname.includes(item.path) ? "menu-child-active" : ""
               }`}
             >
-              <Link href={item.path}>{item.name}</Link>
+              <Link href={item.path}>{locale === "vi" ? item.nameVN : item.nameJP}</Link>
               <span
                 className={`${
                   pathname.includes(item.path) ? "line-active" : ""

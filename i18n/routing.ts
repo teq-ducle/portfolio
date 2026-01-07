@@ -1,12 +1,13 @@
 import { defineRouting } from "next-intl/routing";
 import { createNavigation } from "next-intl/navigation";
+import { SupportedLocale } from "@/constants";
 
 export const routing = defineRouting({
   // A list of all locales that are supported
-  locales: ["ja", "vi"],
+  locales: ["ja", "vi"] as SupportedLocale[],
 
   // Used when no locale matches
-  defaultLocale: "vi",
+  defaultLocale: "vi" as SupportedLocale,
 
   // The locale prefix strategy
   localePrefix: "always",
