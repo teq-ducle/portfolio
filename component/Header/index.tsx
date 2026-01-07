@@ -1,31 +1,16 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { Link, usePathname } from "@/i18n/routing";
-import "@/app/styles/header.css";
+import "./header.css";
 import Image from "next/image";
 import ThemeSwitcher from "../ThemeSwitcher";
 import LanguageSwitcher from "../LanguageSwitcher";
 import { useParams } from "next/navigation";
 import { dataMenu } from "@/constants";
 
-// const dataMenu = [
-//   {
-//     id: "projects",
-//     name: "Projects",
-//     path: "/projects",
-//   },
-// ];
-
 const Header: React.FC = () => {
   const { locale } = useParams();
-  // const dataMenu = [
-  //   {
-  //     id: "projects",
-  //     nameVN: "Projects",
-  //     nameJP: "プロジェクト",
-  //     path: "/projects",
-  //   },
-  // ];
+
   const pathname = usePathname(); // 2. Get current path
 
   const [isVisible, setIsVisible] = useState(true);
@@ -78,7 +63,9 @@ const Header: React.FC = () => {
                 pathname.includes(item.path) ? "menu-child-active" : ""
               }`}
             >
-              <Link href={item.path}>{locale === "vi" ? item.nameVN : item.nameJP}</Link>
+              <Link href={item.path}>
+                {locale === "vi" ? item.nameVN : item.nameJP}
+              </Link>
               <span
                 className={`${
                   pathname.includes(item.path) ? "line-active" : ""
